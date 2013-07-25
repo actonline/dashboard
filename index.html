@@ -12,21 +12,24 @@
 	</head> 
 	<body> 
 		<div data-role="page" data-theme="b" class="linen">
-			<div data-role="header" data-position="fixed" data-theme="b" style="padding-bottom: 2px">
+			<div class="homeheader" data-role="header" data-position="fixed" data-theme="b" style="padding-bottom: 2px">
 				<img src="seal.png" class="seal">
-				<div class="pageheader">PRIVACY DASHBOARD</div>
-				<div class="linkbar">
-					<a href="#shortform" data-transition="slide">Short form</a>
-					<a href="#fullpolicy">Full policy</a>
+				<div class="pageheader">AWESOME APP</div>
+				<div class="subheading">
+					<b>PRIVACY</b> DASHBOARD
 				</div>
 			</div>	
-			<div data-role="content">	
+			<div data-role="content" style="margin:0;padding:0">	
 				<script type="text/javascript" charset="utf-8">
-					section('Data Accessed', behavior_icons);
-					section('Data Sharing', partner_icons);		
+					section('Data Collected', behavior_icons);
+					section('3rd Party Sharing', partner_icons);		
 				</script>
 			</div>
+			<div data-role="footer" data-position="fixed" data-theme="b" style="padding-bottom: 2px">
+				<div class="linkbar"><a href="#fullpolicy" data-transition='slide'>FULL PRIVACY POLICY</a></div>
+			</div>
 		</div>
+
 		<script type="text/javascript" charset="utf-8">
 			for (i in behavior_icons ) {
 				page(behavior_icons[i]);
@@ -36,15 +39,15 @@
 			}
 		</script>
 		<div data-role="page" id="shortform">
-			<div data-role="header" data-position="fixed" data-theme="b">
+			<div data-role="header" data-position="fixed" data-theme="b" class='homeheader' >
 				<a data-rel="back">Back</a>
 				<h1>Short Form</1>
 			</div>
 			<div data-role='content'><script type="text/javascript" charset="utf-8">lorem();</script></div>
 		</div>
 		<div data-role="page" id="fullpolicy">
-			<div data-role="header" data-position="fixed" data-theme="b">
-				<a data-rel="back">Back</a>
+			<div data-role="header" data-position="fixed" data-theme="b" class='homeheader' >
+				<a data-rel="back" class="back"></a>
 				<h1>Policy</1>
 			</div>
 			<div data-role='content'><script type="text/javascript" charset="utf-8">lorem();lorem();lorem();</script></div>
